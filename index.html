@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mostafa Ahmed | Data Analytics Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #071c16;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        header {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #071c16, #0b3328);
+        }
+
+        .hero {
+            max-width: 900px;
+        }
+
+        .logo {
+            width: 180px;
+            max-width: 60%;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #d8a94b;
+        }
+
+        .subtitle {
+            font-size: 22px;
+            color: #d8d8d8;
+            margin-bottom: 25px;
+        }
+
+        .hero-text {
+            max-width: 700px;
+            margin: auto;
+            color: #bfc9c4;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 13px 28px;
+            background: #d8a94b;
+            color: #071c16;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #d8a94b;
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            color: #bfc9c4;
+        }
+
+        .about {
+            background: #0a261e;
+        }
+
+        .project {
+            background: #071c16;
+        }
+
+        .project-header {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .project-header h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .project-header p {
+            color: #c5ceca;
+            font-size: 17px;
+        }
+
+        .dashboards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 50px auto 0;
+        }
+
+        .dashboard-card {
+            background: #0d3026;
+            border: 1px solid #1d5947;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .dashboard-card img {
+            width: 100%;
+            display: block;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h4 {
+            color: #d8a94b;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            color: #c5ceca;
+        }
+
+        .skills {
+            background: #0a261e;
+        }
+
+        .skill-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .skill {
+            background: #123d30;
+            border: 1px solid #27644f;
+            padding: 12px 22px;
+            border-radius: 30px;
+            color: #e7e7e7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #04120e;
+            color: #8f9b96;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 34px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+
+            section {
+                padding: 50px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="hero">
+
+        <!-- Logo -->
+        <img src="My%20logo.jfif" alt="Mostafa Ahmed Logo" class="logo">
+
+        <h1>Mostafa Ahmed</h1>
+
+        <div class="subtitle">
+            Data Analytics & Supply Chain Professional
+        </div>
+
+        <p class="hero-text">
+            I combine Supply Chain expertise with Data Analytics and Business Intelligence
+            to transform operational data into clear insights and actionable business decisions.
+        </p>
+
+        <a href="#projects" class="btn">
+            View My Projects
+        </a>
+
+    </div>
+</header>
+
+
+<section class="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <p class="section-description">
+        I am a Supply Chain and Logistics professional with a strong interest in
+        Data Analytics and Business Intelligence. My projects focus on using data
+        to understand business performance, improve inventory management,
+        monitor procurement activities, and support better decision-making.
+    </p>
+
+</section>
+
+
+<section class="project" id="projects">
+
+    <div class="project-header">
+
+        <h2 class="section-title">Featured Project</h2>
+
+        <h3>AgriLink Animal Nutrition | Supply Chain Analytics</h3>
+
+        <p>
+            An integrated Power BI dashboard designed to provide a complete view
+            of Sales Performance, Inventory Control, Suppliers, Procurement,
+            Imports, Shipments, and Financial Obligations.
+        </p>
+
+    </div>
+
+
+    <div class="dashboards">
+
+        <!-- Dashboard 1 -->
+
+        <div class="dashboard-card">
+
+            <img src="sales-performance.png.png"
+                 alt="AgriLink Sales Performance Dashboard">
+
+            <div class="card-content">
+
+                <h4>01. Sales Performance</h4>
+
+                <p>
+                    Provides a comprehensive view of company sales performance,
+                    including total sales, quantity sold, gross profit, customers,
+                    regional performance, product performance, and top customers.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Dashboard 2 -->
+
+        <div class="dashboard-card">
+
+            <img src="inventory-control.png.png"
+                 alt="AgriLink Inventory Control Dashboard">
+
+            <div class="card-content">
+
+                <h4>02. Inventory Control</h4>
+
+                <p>
+                    Monitors stock levels, inventory turnover, days in stock,
+                    stock value, and reorder points. The dashboard highlights
+                    products that require replenishment before reaching critical
+                    stock levels.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Dashboard 3 -->
+
+        <div class="dashboard-card">
+
+            <img src="suppliers-procurement.png.png"
+                 alt="AgriLink Suppliers and Procurement Dashboard">
+
+            <div class="card-content">
+
+                <h4>03. Suppliers & Procurement</h4>
+
+                <p>
+                    Tracks imported quantities, supplier lead times,
+                    procurement targets, pending shipments, invoice status,
+                    payment due dates, and supplier performance.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="skills">
+
+    <h2 class="section-title">Skills & Tools</h2>
+
+    <div class="skill-list">
+
+        <div class="skill">Power BI</div>
+
+        <div class="skill">Data Analytics</div>
+
+        <div class="skill">Business Intelligence</div>
+
+        <div class="skill">Supply Chain Analytics</div>
+
+        <div class="skill">Inventory Management</div>
+
+        <div class="skill">Procurement Analytics</div>
+
+        <div class="skill">Logistics</div>
+
+        <div class="skill">Microsoft Excel</div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 Mostafa Ahmed | Data Analytics Portfolio
+    </p>
+
+</footer>
+
+</body>
+</html>
