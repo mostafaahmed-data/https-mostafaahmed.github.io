@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mostafa Ahmed | Data Analytics Portfolio</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Mostafa Ahmed | Data Analytics Portfolio
+    </title>
+
 
     <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
 
         * {
             margin: 0;
@@ -19,52 +32,80 @@
         }
 
         body {
+
             font-family: Arial, sans-serif;
+
             background: #071c16;
+
             color: #f5f5f5;
+
             line-height: 1.7;
+
         }
+
 
         /* =========================
            NAVIGATION
         ========================= */
 
         nav {
+
             position: sticky;
+
             top: 0;
+
             z-index: 1000;
 
-            background: rgba(4, 18, 14, 0.95);
+            background: rgba(4, 18, 14, 0.97);
 
             border-bottom: 1px solid #1d5947;
 
             padding: 15px 7%;
 
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
         }
+
 
         .nav-logo {
+
             width: 65px;
+
         }
 
+
         nav ul {
+
             list-style: none;
 
             display: flex;
+
             gap: 30px;
+
         }
+
 
         nav ul li a {
+
             color: #ffffff;
+
             text-decoration: none;
+
             font-size: 15px;
+
             transition: 0.3s;
+
         }
 
+
         nav ul li a:hover {
+
             color: #d8a94b;
+
         }
 
 
@@ -73,10 +114,13 @@
         ========================= */
 
         header {
+
             min-height: 90vh;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             text-align: center;
@@ -84,44 +128,72 @@
             padding: 80px 20px;
 
             background:
+
             radial-gradient(
+
                 circle at top,
+
                 #174a3a 0%,
+
                 #071c16 55%
+
             );
+
         }
+
 
         .hero {
+
             max-width: 1000px;
+
         }
 
+
         .hero-logo {
+
             width: 320px;
+
             max-width: 80%;
 
             margin-bottom: 40px;
 
             filter:
-            drop-shadow(0 10px 30px rgba(0,0,0,0.5));
+
+            drop-shadow(
+
+                0 10px 30px
+
+                rgba(0,0,0,0.5)
+
+            );
+
         }
 
+
         h1 {
+
             font-size: 56px;
 
             margin-bottom: 15px;
 
             color: #d8a94b;
+
         }
 
+
         .subtitle {
+
             font-size: 25px;
 
             color: #ffffff;
 
             margin-bottom: 25px;
+
         }
 
+
         .hero-text {
+
             max-width: 750px;
 
             margin: auto;
@@ -129,9 +201,12 @@
             color: #c5ceca;
 
             font-size: 18px;
+
         }
 
+
         .btn {
+
             display: inline-block;
 
             margin-top: 35px;
@@ -149,13 +224,20 @@
             border-radius: 6px;
 
             transition: 0.3s;
+
         }
 
+
         .btn:hover {
+
             transform: translateY(-3px);
 
             box-shadow:
-            0 10px 25px rgba(0,0,0,0.4);
+
+            0 10px 25px
+
+            rgba(0,0,0,0.4);
+
         }
 
 
@@ -164,10 +246,14 @@
         ========================= */
 
         section {
+
             padding: 90px 7%;
+
         }
 
+
         .section-title {
+
             text-align: center;
 
             color: #d8a94b;
@@ -175,9 +261,12 @@
             font-size: 38px;
 
             margin-bottom: 20px;
+
         }
 
+
         .section-description {
+
             text-align: center;
 
             max-width: 850px;
@@ -187,6 +276,7 @@
             color: #bfc9c4;
 
             font-size: 18px;
+
         }
 
 
@@ -195,7 +285,9 @@
         ========================= */
 
         .about {
+
             background: #0a261e;
+
         }
 
 
@@ -204,39 +296,94 @@
         ========================= */
 
         .project {
+
             background: #071c16;
+
         }
 
+
         .project-header {
+
             max-width: 1000px;
 
             margin: auto;
 
             text-align: center;
 
-            margin-bottom: 70px;
+            margin-bottom: 45px;
+
         }
 
+
         .project-header h3 {
+
             font-size: 32px;
 
             margin-bottom: 20px;
 
             color: #ffffff;
+
         }
 
+
         .project-header p {
+
             color: #c5ceca;
 
             font-size: 18px;
+
         }
 
 
         /* =========================
-           DASHBOARD
+           PROJECT SCOPE
+        ========================= */
+
+        .project-scope {
+
+            max-width: 900px;
+
+            margin: 0 auto 75px;
+
+            padding: 30px 35px;
+
+            background: #0b2c22;
+
+            border-left: 4px solid #d8a94b;
+
+            border-radius: 8px;
+
+            text-align: center;
+
+        }
+
+
+        .project-scope h4 {
+
+            color: #d8a94b;
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .project-scope p {
+
+            color: #c5ceca;
+
+            font-size: 17px;
+
+        }
+
+
+        /* =========================
+           DASHBOARDS
         ========================= */
 
         .dashboard {
+
             max-width: 1400px;
 
             margin: 0 auto 100px;
@@ -250,47 +397,123 @@
             overflow: hidden;
 
             box-shadow:
-            0 20px 50px rgba(0,0,0,0.35);
+
+            0 20px 50px
+
+            rgba(0,0,0,0.35);
+
         }
 
+
         .dashboard img {
+
             width: 100%;
 
             display: block;
 
             background: #ffffff;
+
         }
+
 
         .dashboard-info {
+
             padding: 35px 45px;
+
         }
 
+
         .dashboard-info h4 {
+
             color: #d8a94b;
 
             font-size: 28px;
 
             margin-bottom: 15px;
+
         }
 
+
         .dashboard-info p {
+
             color: #c5ceca;
 
             font-size: 17px;
 
-            max-width: 1000px;
+            max-width: 1050px;
+
         }
 
 
         /* =========================
-           SKILLS
+           PROJECT TOOLS
+        ========================= */
+
+        .project-tools {
+
+            max-width: 1100px;
+
+            margin: -20px auto 80px;
+
+            text-align: center;
+
+        }
+
+
+        .project-tools h3 {
+
+            color: #d8a94b;
+
+            font-size: 28px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .tool-list {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+        }
+
+
+        .tool-list span {
+
+            padding: 10px 20px;
+
+            background: #123d30;
+
+            border: 1px solid #27644f;
+
+            border-radius: 25px;
+
+            color: #e7e7e7;
+
+            font-size: 15px;
+
+        }
+
+
+        /* =========================
+           GENERAL SKILLS
         ========================= */
 
         .skills {
+
             background: #0a261e;
+
         }
 
+
         .skill-list {
+
             display: flex;
 
             justify-content: center;
@@ -302,9 +525,12 @@
             max-width: 1000px;
 
             margin: 45px auto 0;
+
         }
 
+
         .skill {
+
             background: #123d30;
 
             border: 1px solid #27644f;
@@ -314,6 +540,7 @@
             border-radius: 30px;
 
             color: #e7e7e7;
+
         }
 
 
@@ -322,6 +549,7 @@
         ========================= */
 
         footer {
+
             text-align: center;
 
             padding: 35px;
@@ -329,6 +557,7 @@
             background: #04120e;
 
             color: #8f9b96;
+
         }
 
 
@@ -338,43 +567,75 @@
 
         @media (max-width: 700px) {
 
+
             nav {
+
                 flex-direction: column;
 
                 gap: 15px;
+
             }
 
+
             nav ul {
+
                 gap: 15px;
 
                 flex-wrap: wrap;
 
                 justify-content: center;
+
             }
+
 
             h1 {
+
                 font-size: 38px;
+
             }
+
 
             .subtitle {
+
                 font-size: 20px;
+
             }
+
 
             .hero-logo {
+
                 width: 250px;
+
             }
+
 
             section {
+
                 padding: 60px 20px;
+
             }
+
+
+            .project-scope {
+
+                padding: 25px 20px;
+
+            }
+
 
             .dashboard-info {
+
                 padding: 25px;
+
             }
 
+
             .dashboard-info h4 {
+
                 font-size: 23px;
+
             }
+
 
         }
 
@@ -390,59 +651,112 @@
      NAVIGATION
 ========================= -->
 
+
 <nav>
 
+
     <img
+
         src="My%20logo.jfif"
+
         alt="Mostafa Ahmed Logo"
+
         class="nav-logo"
+
     >
+
 
     <ul>
 
-        <li>
-            <a href="#home">Home</a>
-        </li>
 
         <li>
-            <a href="#about">About</a>
+
+            <a href="#home">
+
+                Home
+
+            </a>
+
         </li>
 
-        <li>
-            <a href="#projects">Projects</a>
-        </li>
 
         <li>
-            <a href="#skills">Skills</a>
+
+            <a href="#about">
+
+                About
+
+            </a>
+
         </li>
 
+
         <li>
-            <a href="#contact">Contact</a>
+
+            <a href="#projects">
+
+                Projects
+
+            </a>
+
         </li>
+
+
+        <li>
+
+            <a href="#skills">
+
+                Skills
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="#contact">
+
+                Contact
+
+            </a>
+
+        </li>
+
 
     </ul>
 
+
 </nav>
+
 
 
 <!-- =========================
      HERO
 ========================= -->
 
+
 <header id="home">
+
 
     <div class="hero">
 
 
         <img
+
             src="My%20logo.jfif"
+
             alt="Mostafa Ahmed Logo"
+
             class="hero-logo"
+
         >
 
 
         <h1>
+
             Mostafa Ahmed
+
         </h1>
 
 
@@ -456,15 +770,20 @@
         <p class="hero-text">
 
             I combine Supply Chain expertise with Data Analytics
+
             and Business Intelligence to transform operational data
+
             into clear insights and actionable business decisions.
 
         </p>
 
 
         <a
+
             href="#projects"
+
             class="btn"
+
         >
 
             Explore My Projects
@@ -474,17 +793,24 @@
 
     </div>
 
+
 </header>
+
 
 
 <!-- =========================
      ABOUT
 ========================= -->
 
+
 <section
+
     class="about"
+
     id="about"
+
 >
+
 
     <h2 class="section-title">
 
@@ -496,26 +822,35 @@
     <p class="section-description">
 
         I am a Supply Chain and Logistics professional with a strong
+
         interest in Data Analytics and Business Intelligence.
 
         My projects focus on transforming business and operational data
+
         into meaningful insights that support better decision-making.
 
         I work on Sales Analytics, Inventory Management, Procurement,
+
         Import Operations, and Supply Chain Performance.
 
     </p>
 
+
 </section>
 
 
+
 <!-- =========================
-     PROJECT
+     FEATURED PROJECT
 ========================= -->
 
+
 <section
+
     class="project"
+
     id="projects"
+
 >
 
 
@@ -532,7 +867,9 @@
         <h3>
 
             AgriLink Animal Nutrition
+
             <br>
+
             Sales, Inventory & Supply Chain Analytics
 
         </h3>
@@ -541,9 +878,44 @@
         <p>
 
             An integrated Power BI solution designed to provide
+
             end-to-end visibility across Sales Performance,
+
             Inventory Control, Import Operations, Procurement,
+
             Supplier Performance, Shipments, and Financial Obligations.
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         PROJECT SCOPE
+    ========================= -->
+
+
+    <div class="project-scope">
+
+
+        <h4>
+
+            Project Scope
+
+        </h4>
+
+
+        <p>
+
+            An integrated Power BI solution developed to provide
+
+            end-to-end visibility across sales performance,
+
+            inventory management, procurement, import operations,
+
+            shipments, and supplier activities.
 
         </p>
 
@@ -561,8 +933,11 @@
 
 
         <img
+
             src="sales-performance.png.png"
+
             alt="Sales Performance Dashboard"
+
         >
 
 
@@ -579,27 +954,38 @@
             <p>
 
                 This dashboard provides a comprehensive overview
+
                 of the company's sales performance during 2026.
 
                 It tracks key performance indicators such as
+
                 total sales value, quantity sold in tons,
+
                 gross profit, customer performance,
+
                 regional performance, and product performance.
 
                 The interactive product images on the left side
+
                 also work as slicers, allowing users to select
+
                 a specific product and dynamically filter the
+
                 entire dashboard.
 
                 The dashboard helps management identify
+
                 top-performing customers, analyze product demand,
+
                 monitor sales trends, and understand the main
+
                 drivers of revenue.
 
             </p>
 
 
         </div>
+
 
     </div>
 
@@ -614,8 +1000,11 @@
 
 
         <img
+
             src="inventory-control.png.png"
+
             alt="Inventory Control Dashboard"
+
         >
 
 
@@ -632,27 +1021,36 @@
             <p>
 
                 This dashboard focuses on inventory visibility
+
                 and stock management.
 
                 It monitors current stock levels, inventory value,
+
                 stock movement, days in stock, and inventory turnover.
 
                 A Reorder Point mechanism is also included to
+
                 identify products that are approaching critical
+
                 stock levels.
 
                 This helps the business detect potential stockout
+
                 risks early and take action by placing purchase
+
                 orders before inventory reaches critical levels.
 
                 The dashboard also analyzes how long each product
+
                 remains in inventory, supporting better inventory
+
                 turnover and working capital management.
 
             </p>
 
 
         </div>
+
 
     </div>
 
@@ -667,8 +1065,11 @@
 
 
         <img
+
             src="suppliers-procurement.png.png"
+
             alt="Suppliers and Procurement Dashboard"
+
         >
 
 
@@ -685,20 +1086,29 @@
             <p>
 
                 This dashboard provides visibility into the company's
+
                 international procurement and import operations.
 
                 It tracks incoming shipments, imported quantities,
+
                 supplier lead times, product targets, target achievement,
+
                 pending shipments, and supplier performance.
 
                 The dashboard also monitors supplier invoices,
+
                 payment status, payment due dates, and financial
+
                 obligations.
 
                 By connecting procurement data with shipment information,
+
                 the dashboard helps management understand what has
+
                 already arrived, what is currently in transit,
+
                 which products are behind target, and which financial
+
                 payments require attention.
 
             </p>
@@ -706,19 +1116,92 @@
 
         </div>
 
+
+    </div>
+
+
+
+    <!-- =========================
+         PROJECT TOOLS
+    ========================= -->
+
+
+    <div class="project-tools">
+
+
+        <h3>
+
+            Tools & Technologies
+
+        </h3>
+
+
+        <div class="tool-list">
+
+
+            <span>
+
+                Power BI
+
+            </span>
+
+
+            <span>
+
+                Microsoft Excel
+
+            </span>
+
+
+            <span>
+
+                DAX
+
+            </span>
+
+
+            <span>
+
+                Data Modeling
+
+            </span>
+
+
+            <span>
+
+                Data Analytics
+
+            </span>
+
+
+            <span>
+
+                Supply Chain Analytics
+
+            </span>
+
+
+        </div>
+
+
     </div>
 
 
 </section>
 
 
+
 <!-- =========================
-     SKILLS
+     GENERAL SKILLS
 ========================= -->
 
+
 <section
+
     class="skills"
+
     id="skills"
+
 >
 
 
@@ -733,42 +1216,58 @@
 
 
         <div class="skill">
+
             Power BI
+
         </div>
 
 
         <div class="skill">
+
             Data Analytics
+
         </div>
 
 
         <div class="skill">
+
             Business Intelligence
+
         </div>
 
 
         <div class="skill">
+
             Supply Chain Analytics
+
         </div>
 
 
         <div class="skill">
+
             Inventory Management
+
         </div>
 
 
         <div class="skill">
+
             Procurement Analytics
+
         </div>
 
 
         <div class="skill">
+
             Logistics
+
         </div>
 
 
         <div class="skill">
+
             Microsoft Excel
+
         </div>
 
 
@@ -778,13 +1277,18 @@
 </section>
 
 
+
 <!-- =========================
      CONTACT
 ========================= -->
 
+
 <section
+
     id="contact"
+
     class="about"
+
 >
 
 
@@ -798,7 +1302,9 @@
     <p class="section-description">
 
         I am open to opportunities related to
+
         Data Analytics, Business Intelligence,
+
         Supply Chain Analytics, and Logistics.
 
     </p>
@@ -807,9 +1313,11 @@
 </section>
 
 
+
 <!-- =========================
      FOOTER
 ========================= -->
+
 
 <footer>
 
@@ -817,6 +1325,7 @@
     <p>
 
         © 2026 Mostafa Ahmed
+
         | Data Analytics Portfolio
 
     </p>
