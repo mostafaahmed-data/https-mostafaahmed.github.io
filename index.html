@@ -410,19 +410,49 @@ text-align:center;
 
 .contact-box{
 margin-top:50px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+text-align:left;
+}
+
+.contact-card{
+background:var(--card);
+border:1px solid rgba(255,255,255,.08);
+border-radius:15px;
+padding:35px 25px;
 display:flex;
 flex-direction:column;
-gap:25px;
-font-size:20px;
-}
-
-.contact-box a{
-color:var(--gold);
-transition:.3s;
-}
-
-.contact-box a:hover{
+align-items:center;
+text-align:center;
+gap:8px;
+transition:.35s;
 color:white;
+}
+
+.contact-card:hover{
+transform:translateY(-10px);
+border-color:var(--gold);
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+.contact-icon{
+font-size:34px;
+margin-bottom:5px;
+}
+
+.contact-label{
+color:var(--gold);
+font-size:13px;
+font-weight:bold;
+letter-spacing:1.5px;
+text-transform:uppercase;
+}
+
+.contact-value{
+color:#e6e6e6;
+font-size:17px;
+word-break:break-word;
 }
 
 /* ==========================================
@@ -479,7 +509,7 @@ padding:70px 25px;
 
 <nav>
     <div class="logo">
-        <img src="logo.png" alt="Mostafa Ahmed Logo">
+        <img src="logo.png.png" alt="Mostafa Ahmed Logo">
         <h2 style="color:#ffffff;">Mostafa Ahmed</h2>
     </div>
     <ul>
@@ -496,7 +526,7 @@ padding:70px 25px;
 
 <section class="hero" id="home">
     <div class="hero-content">
-        <img src="logo.png" class="hero-logo" alt="Mostafa Ahmed Logo">
+        <img src="logo.png.png" class="hero-logo" alt="Mostafa Ahmed Logo">
         <h1>Mostafa Ahmed</h1>
         <h2>Data Analyst | BI Analyst | Supply Chain Analyst</h2>
         <p>
@@ -796,7 +826,7 @@ and improve replenishment decisions using historical business data.
 </div>
 
 <div class="dashboard">
-<img src="sales-analysis-3-years.png" alt="Sales Analysis Dashboard">
+<img src="sales-analysis-3-years.png.png" alt="Sales Analysis Dashboard">
 <div class="dashboard-info">
 <h3>Sales Analysis Dashboard</h3>
 <p>
@@ -807,13 +837,13 @@ and 2026.
 Key insights include:
 </p>
 <p>
-• Year-over-Year Sales Comparison<br>
-• Monthly Sales Trends<br>
-• Top Selling Products<br>
-• Top Customers<br>
-• Product Performance<br>
-• Regional Performance<br>
-• Seasonal Demand Analysis
+- Year-over-Year Sales Comparison<br>
+- Monthly Sales Trends<br>
+- Top Selling Products<br>
+- Top Customers<br>
+- Product Performance<br>
+- Regional Performance<br>
+- Seasonal Demand Analysis
 </p>
 <p>
 Interactive filters allow decision makers
@@ -835,13 +865,13 @@ over a three-year period.
 The dashboard monitors:
 </p>
 <p>
-• Inventory Turnover<br>
-• Inventory Value<br>
-• Stock Aging<br>
-• Fast-moving Products<br>
-• Slow-moving Products<br>
-• Product Availability<br>
-• Reorder Point Status
+- Inventory Turnover<br>
+- Inventory Value<br>
+- Stock Aging<br>
+- Fast-moving Products<br>
+- Slow-moving Products<br>
+- Product Availability<br>
+- Reorder Point Status
 </p>
 <p>
 These insights support better purchasing decisions,
@@ -904,7 +934,7 @@ Data Analytics, and Supply Chain Analytics solutions.
      CONTACT
 ========================================== -->
 
-<section id="contact" class="about">
+<section id="contact" class="contact">
 <div class="container">
 <h2 class="section-title">Let's Connect</h2>
 <p class="section-description">
@@ -918,20 +948,23 @@ Feel free to contact me.
 </p>
 
 <div class="contact-box">
-<span>
-📧
-<a href="mailto:ma2959774@gmail.com" style="color:white;">ma2959774@gmail.com</a>
-</span>
+<a href="mailto:ma2959774@gmail.com" class="contact-card">
+<span class="contact-icon">📧</span>
+<span class="contact-label">Email</span>
+<span class="contact-value">ma2959774@gmail.com</span>
+</a>
 
-<span>
-📱
-<a href="tel:+201201988728" style="color:white;">+20 120 198 8728</a>
-</span>
+<a href="tel:+201201988728" class="contact-card">
+<span class="contact-icon">📱</span>
+<span class="contact-label">Phone</span>
+<span class="contact-value">+20 120 198 8728</span>
+</a>
 
-<span>
-💼
-<a href="https://www.linkedin.com/in/mostafa-ahmed-37a47924a/" target="_blank" style="color:white;">LinkedIn Profile</a>
-</span>
+<a href="https://www.linkedin.com/in/mostafa-ahmed-37a47924a/" target="_blank" class="contact-card">
+<span class="contact-icon">💼</span>
+<span class="contact-label">LinkedIn</span>
+<span class="contact-value">Mostafa Ahmed</span>
+</a>
 </div>
 </div>
 </section>
