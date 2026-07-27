@@ -1,1524 +1,1745 @@
-<!DOCTYPE html>
-<html lang="en">
+/* ==========================================
+   RESET & GLOBAL
+========================================== */
 
-<head>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    <meta charset="UTF-8">
+html{
+    scroll-behavior:smooth;
+}
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+body{
 
-    <title>
-        Mostafa Ahmed | Data Analytics Portfolio
-    </title>
+    font-family:Arial,Helvetica,sans-serif;
 
+    background:#071c16;
 
-    <style>
+    color:#f4f4f4;
 
-        /* =========================
-           GLOBAL
-        ========================= */
+    line-height:1.8;
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+img{
 
-        body {
+    max-width:100%;
 
-            font-family: Arial, sans-serif;
+    display:block;
 
-            background: #071c16;
+}
 
-            color: #f5f5f5;
+a{
 
-            line-height: 1.7;
+    text-decoration:none;
 
-        }
+}
 
+section{
 
-        /* =========================
-           NAVIGATION
-        ========================= */
+    padding:90px 8%;
 
-        nav {
+}
 
-            position: sticky;
+.container{
 
-            top: 0;
+    width:min(1300px,100%);
 
-            z-index: 1000;
+    margin:auto;
 
-            background: rgba(4, 18, 14, 0.97);
+}
 
-            border-bottom: 1px solid #1d5947;
 
-            padding: 15px 7%;
+/* ==========================================
+   COLORS
+========================================== */
 
-            display: flex;
+:root{
 
-            justify-content: space-between;
+--gold:#d8a94b;
 
-            align-items: center;
+--green:#123d30;
 
-        }
+--green2:#0b2c22;
 
+--green3:#174a3a;
 
-        .nav-logo {
+--dark:#071c16;
 
-            width: 65px;
+--card:#0d3026;
 
-        }
+--border:#27644f;
 
+--text:#d8d8d8;
 
-        nav ul {
+}
 
-            list-style: none;
 
-            display: flex;
+/* ==========================================
+   NAVBAR
+========================================== */
 
-            gap: 30px;
+nav{
 
-        }
+position:fixed;
 
+top:0;
 
-        nav ul li a {
+left:0;
 
-            color: #ffffff;
+width:100%;
 
-            text-decoration: none;
+padding:18px 8%;
 
-            font-size: 15px;
+display:flex;
 
-            transition: 0.3s;
+justify-content:space-between;
 
-        }
+align-items:center;
 
+background:rgba(7,28,22,.95);
 
-        nav ul li a:hover {
+backdrop-filter:blur(15px);
 
-            color: #d8a94b;
+border-bottom:1px solid rgba(255,255,255,.08);
 
-        }
+z-index:999;
 
+}
 
-        /* =========================
-           HERO
-        ========================= */
+.logo{
 
-        header {
+display:flex;
 
-            min-height: 90vh;
+align-items:center;
 
-            display: flex;
+gap:15px;
 
-            align-items: center;
+}
 
-            justify-content: center;
+.logo img{
 
-            text-align: center;
+width:62px;
 
-            padding: 80px 20px;
+transition:.4s;
 
-            background:
+}
 
-            radial-gradient(
+.logo img:hover{
 
-                circle at top,
+transform:rotate(-5deg) scale(1.08);
 
-                #174a3a 0%,
+}
 
-                #071c16 55%
+nav ul{
 
-            );
+display:flex;
 
-        }
+gap:35px;
 
+list-style:none;
 
-        .hero {
+}
 
-            max-width: 1000px;
+nav ul li a{
 
-        }
+color:white;
 
+font-size:15px;
 
-        .hero-logo {
+transition:.3s;
 
-            width: 320px;
+}
 
-            max-width: 80%;
+nav ul li a:hover{
 
-            margin-bottom: 40px;
+color:var(--gold);
 
-            filter:
+}
 
-            drop-shadow(
 
-                0 10px 30px
+/* ==========================================
+   HERO
+========================================== */
 
-                rgba(0,0,0,0.5)
+.hero{
 
-            );
+min-height:100vh;
 
-        }
+display:flex;
 
+align-items:center;
 
-        h1 {
+justify-content:center;
 
-            font-size: 56px;
+text-align:center;
 
-            margin-bottom: 15px;
+background:
 
-            color: #d8a94b;
+radial-gradient(circle at top,
 
-        }
+#174a3a 0%,
 
+#071c16 60%);
 
-        .subtitle {
+padding-top:100px;
 
-            font-size: 25px;
+}
 
-            color: #ffffff;
+.hero-content{
 
-            margin-bottom: 25px;
+max-width:900px;
 
-        }
+}
 
+.hero-logo{
 
-        .hero-text {
+width:260px;
 
-            max-width: 750px;
+margin:auto;
 
-            margin: auto;
+margin-bottom:35px;
 
-            color: #c5ceca;
+filter:drop-shadow(0 20px 40px rgba(0,0,0,.45));
 
-            font-size: 18px;
+transition:.4s;
 
-        }
+}
 
+.hero-logo:hover{
 
-        .btn {
+transform:scale(1.05);
 
-            display: inline-block;
+}
 
-            margin-top: 35px;
+.hero h1{
 
-            padding: 14px 32px;
+font-size:65px;
 
-            background: #d8a94b;
+margin-bottom:10px;
 
-            color: #071c16;
+color:white;
 
-            text-decoration: none;
+}
 
-            font-weight: bold;
+.hero h2{
 
-            border-radius: 6px;
+font-size:27px;
 
-            transition: 0.3s;
+font-weight:400;
 
-        }
+color:var(--gold);
 
+margin-bottom:25px;
 
-        .btn:hover {
+}
 
-            transform: translateY(-3px);
+.hero p{
 
-            box-shadow:
+max-width:760px;
 
-            0 10px 25px
+margin:auto;
 
-            rgba(0,0,0,0.4);
+font-size:19px;
 
-        }
+color:#cfcfcf;
 
+}
 
-        /* =========================
-           GENERAL SECTIONS
-        ========================= */
+.hero-buttons{
 
-        section {
+margin-top:40px;
 
-            padding: 90px 7%;
+display:flex;
 
-        }
+justify-content:center;
 
+gap:20px;
 
-        .section-title {
+flex-wrap:wrap;
 
-            text-align: center;
+}
 
-            color: #d8a94b;
+.btn{
 
-            font-size: 38px;
+padding:14px 35px;
 
-            margin-bottom: 20px;
+border-radius:8px;
 
-        }
+font-weight:bold;
 
+transition:.35s;
 
-        .section-description {
+}
 
-            text-align: center;
+.btn-primary{
 
-            max-width: 850px;
+background:var(--gold);
 
-            margin: auto;
+color:#071c16;
 
-            color: #bfc9c4;
+}
 
-            font-size: 18px;
+.btn-primary:hover{
 
-        }
+transform:translateY(-5px);
 
+box-shadow:0 15px 35px rgba(0,0,0,.35);
 
-        /* =========================
-           ABOUT
-        ========================= */
+}
 
-        .about {
+.btn-outline{
 
-            background: #0a261e;
+border:2px solid var(--gold);
 
-        }
+color:white;
 
+}
 
-        /* =========================
-           PROJECT
-        ========================= */
+.btn-outline:hover{
 
-        .project {
+background:var(--gold);
 
-            background: #071c16;
+color:#071c16;
 
-        }
+}
 
 
-        .project-header {
+/* ==========================================
+   SECTION TITLES
+========================================== */
 
-            max-width: 1000px;
+.section-title{
 
-            margin: auto;
+text-align:center;
 
-            text-align: center;
+font-size:42px;
 
-            margin-bottom: 45px;
+color:var(--gold);
 
-        }
+margin-bottom:20px;
 
+}
 
-        .project-header h3 {
+.section-description{
 
-            font-size: 32px;
+max-width:900px;
 
-            margin-bottom: 20px;
+margin:auto;
 
-            color: #ffffff;
+text-align:center;
 
-        }
+font-size:18px;
 
+color:#c9c9c9;
+/* ==========================================
+   ABOUT SECTION
+========================================== */
 
-        .project-header p {
+.about{
 
-            color: #c5ceca;
+background:#0a261e;
 
-            font-size: 18px;
+}
 
-        }
+.about-grid{
 
+display:grid;
 
-        /* =========================
-           PROJECT SCOPE
-        ========================= */
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
-        .project-scope {
+gap:25px;
 
-            max-width: 900px;
+margin-top:60px;
 
-            margin: 0 auto 75px;
+}
 
-            padding: 30px 35px;
+.about-card{
 
-            background: #0b2c22;
+background:var(--card);
 
-            border-left: 4px solid #d8a94b;
+padding:35px;
 
-            border-radius: 8px;
+border-radius:15px;
 
-            text-align: center;
+border:1px solid rgba(255,255,255,.08);
 
-        }
+transition:.35s;
 
+}
 
-        .project-scope h4 {
+.about-card:hover{
 
-            color: #d8a94b;
+transform:translateY(-10px);
 
-            font-size: 25px;
+border-color:var(--gold);
 
-            margin-bottom: 10px;
+box-shadow:0 20px 40px rgba(0,0,0,.35);
 
-        }
+}
 
+.about-card h3{
 
-        .project-scope p {
+color:var(--gold);
 
-            color: #c5ceca;
+margin-bottom:15px;
 
-            font-size: 17px;
+font-size:22px;
 
-        }
+}
 
+.about-card p{
 
-        /* =========================
-           DASHBOARDS
-        ========================= */
+color:#d0d0d0;
 
-        .dashboard {
+}
 
-            max-width: 1400px;
 
-            margin: 0 auto 100px;
+/* ==========================================
+   STATS
+========================================== */
 
-            background: #0b2c22;
+.stats{
 
-            border: 1px solid #1d5947;
+background:#071c16;
 
-            border-radius: 12px;
+}
 
-            overflow: hidden;
+.stats-grid{
 
-            box-shadow:
+display:grid;
 
-            0 20px 50px
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-            rgba(0,0,0,0.35);
+gap:30px;
 
-        }
+margin-top:60px;
 
+}
 
-        .dashboard img {
+.stat-card{
 
-            width: 100%;
+background:var(--green2);
 
-            display: block;
+padding:40px;
 
-            background: #ffffff;
+text-align:center;
 
-        }
+border-radius:15px;
 
+transition:.35s;
 
-        .dashboard-info {
+border:1px solid rgba(255,255,255,.08);
 
-            padding: 35px 45px;
+}
 
-        }
+.stat-card:hover{
 
+transform:scale(1.05);
 
-        .dashboard-info h4 {
+border-color:var(--gold);
 
-            color: #d8a94b;
+}
 
-            font-size: 28px;
+.stat-card h2{
 
-            margin-bottom: 15px;
+font-size:48px;
 
-        }
+color:var(--gold);
 
+margin-bottom:10px;
 
-        .dashboard-info p {
+}
 
-            color: #c5ceca;
+.stat-card p{
 
-            font-size: 17px;
+font-size:18px;
 
-            max-width: 1050px;
+color:#ddd;
 
-        }
+}
 
 
-        /* =========================
-           PROJECT TOOLS
-        ========================= */
+/* ==========================================
+   PROJECTS
+========================================== */
 
-        .project-tools {
+.project{
 
-            max-width: 1100px;
+background:#0a261e;
 
-            margin: -20px auto 80px;
+}
 
-            text-align: center;
+.project-card{
 
-        }
+background:var(--card);
 
+border-radius:18px;
 
-        .project-tools h3 {
+overflow:hidden;
 
-            color: #d8a94b;
+margin-top:70px;
 
-            font-size: 28px;
+box-shadow:0 20px 45px rgba(0,0,0,.35);
 
-            margin-bottom: 25px;
+}
 
-        }
+.project-image{
 
+overflow:hidden;
 
-        .tool-list {
+}
 
-            display: flex;
+.project-image img{
 
-            justify-content: center;
+transition:.5s;
 
-            flex-wrap: wrap;
+}
 
-            gap: 12px;
+.project-image:hover img{
 
-        }
+transform:scale(1.03);
 
+}
 
-        .tool-list span {
+.project-info{
 
-            padding: 10px 20px;
+padding:40px;
 
-            background: #123d30;
+}
 
-            border: 1px solid #27644f;
+.project-info h2{
 
-            border-radius: 25px;
+color:var(--gold);
 
-            color: #e7e7e7;
+font-size:35px;
 
-            font-size: 15px;
+margin-bottom:20px;
 
-        }
+}
 
+.project-info h4{
 
-        /* =========================
-           GENERAL SKILLS
-        ========================= */
+margin-top:30px;
 
-        .skills {
+margin-bottom:10px;
 
-            background: #0a261e;
+color:white;
 
-        }
+font-size:22px;
 
+}
 
-        .skill-list {
+.project-info p{
 
-            display: flex;
+color:#d6d6d6;
 
-            justify-content: center;
+margin-bottom:15px;
 
-            flex-wrap: wrap;
+}
 
-            gap: 15px;
+.dashboard{
 
-            max-width: 1000px;
+margin-top:60px;
 
-            margin: 45px auto 0;
+background:#123d30;
 
-        }
+border-radius:15px;
 
+overflow:hidden;
 
-        .skill {
+border:1px solid rgba(255,255,255,.08);
 
-            background: #123d30;
+}
 
-            border: 1px solid #27644f;
+.dashboard img{
 
-            padding: 12px 24px;
+transition:.4s;
 
-            border-radius: 30px;
+}
 
-            color: #e7e7e7;
+.dashboard:hover img{
 
-        }
+transform:scale(1.02);
 
+}
 
-        /* =========================
-           FOOTER
-        ========================= */
+.dashboard-info{
 
-        footer {
+padding:35px;
 
-            text-align: center;
+}
 
-            padding: 35px;
+.dashboard-info h3{
 
-            background: #04120e;
+color:var(--gold);
 
-            color: #8f9b96;
+margin-bottom:15px;
 
-        }
+font-size:28px;
 
+}
 
-        /* =========================
-           MOBILE
-        ========================= */
+.dashboard-info p{
 
-        @media (max-width: 700px) {
+color:#d8d8d8;
 
+}
 
-            nav {
 
-                flex-direction: column;
+/* ==========================================
+   TOOLS
+========================================== */
 
-                gap: 15px;
+.tools{
 
-            }
+margin-top:40px;
 
+display:flex;
 
-            nav ul {
+flex-wrap:wrap;
 
-                gap: 15px;
+gap:15px;
 
-                flex-wrap: wrap;
+}
 
-                justify-content: center;
+.tools span{
 
-            }
+background:#123d30;
 
+padding:12px 22px;
 
-            h1 {
+border-radius:25px;
 
-                font-size: 38px;
+border:1px solid #27644f;
 
-            }
+transition:.3s;
 
+}
 
-            .subtitle {
+.tools span:hover{
 
-                font-size: 20px;
+background:var(--gold);
 
-            }
+color:#071c16;
 
+}
 
-            .hero-logo {
 
-                width: 250px;
+/* ==========================================
+   CONTACT
+========================================== */
 
-            }
+.contact{
 
+background:#0a261e;
 
-            section {
+text-align:center;
 
-                padding: 60px 20px;
+}
 
-            }
+.contact-box{
 
+margin-top:50px;
 
-            .project-scope {
+display:flex;
 
-                padding: 25px 20px;
+flex-direction:column;
 
-            }
+gap:25px;
 
+font-size:20px;
 
-            .dashboard-info {
+}
 
-                padding: 25px;
+.contact-box a{
 
-            }
+color:var(--gold);
 
+transition:.3s;
 
-            .dashboard-info h4 {
+}
 
-                font-size: 23px;
+.contact-box a:hover{
 
-            }
+color:white;
 
+}
 
-        }
 
-    </style>
+/* ==========================================
+   FOOTER
+========================================== */
 
-</head>
+footer{
 
+padding:35px;
 
-<body>
+background:#04120e;
 
+text-align:center;
 
-<!-- =========================
+color:#9d9d9d;
+
+font-size:15px;
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:45px;
+
+}
+
+.hero h2{
+
+font-size:22px;
+
+}
+
+.hero-logo{
+
+width:190px;
+
+}
+
+nav{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.project-info{
+
+padding:25px;
+
+}
+
+.dashboard-info{
+
+padding:25px;
+
+}
+
+section{
+
+padding:70px 25px;
+
+}
+
+}
+<!-- ==========================================
      NAVIGATION
-========================= -->
-
+========================================== -->
 
 <nav>
 
+    <div class="logo">
 
-    <img
+        <img src="logo.png" alt="Mostafa Ahmed Logo">
 
-        src="logo.png"
+        <h2 style="color:#ffffff;">
+            Mostafa Ahmed
+        </h2>
 
-        alt="Mostafa Ahmed Logo"
-
-        class="nav-logo"
-
-    >
-
+    </div>
 
     <ul>
 
+        <li><a href="#home">Home</a></li>
 
-        <li>
+        <li><a href="#about">About</a></li>
 
-            <a href="#home">
+        <li><a href="#projects">Projects</a></li>
 
-                Home
-
-            </a>
-
-        </li>
-
-
-        <li>
-
-            <a href="#about">
-
-                About
-
-            </a>
-
-        </li>
-
-
-        <li>
-
-            <a href="#projects">
-
-                Projects
-
-            </a>
-
-        </li>
-
-
-        <li>
-
-            <a href="#skills">
-
-                Skills
-
-            </a>
-
-        </li>
-
-
-        <li>
-
-            <a href="#contact">
-
-                Contact
-
-            </a>
-
-        </li>
-
+        <li><a href="#contact">Contact</a></li>
 
     </ul>
-
 
 </nav>
 
 
-
-<!-- =========================
+<!-- ==========================================
      HERO
-========================= -->
+========================================== -->
 
+<section class="hero" id="home">
 
-<header id="home">
-
-
-    <div class="hero">
-
+    <div class="hero-content">
 
         <img
-
             src="logo.png"
-
-            alt="Mostafa Ahmed Logo"
-
             class="hero-logo"
-
+            alt="Mostafa Ahmed Logo"
         >
-
 
         <h1>
-
             Mostafa Ahmed
-
         </h1>
 
-
-        <div class="subtitle">
-
+        <h2>
             Data Analyst | BI Analyst | Supply Chain Analyst
-
-        </div>
-
-
-        <p class="hero-text">
-
-            I combine Supply Chain expertise with Data Analytics
-
-            and Business Intelligence to transform operational data
-
-            into clear insights and actionable business decisions.
-
-        </p>
-
-
-        <a
-
-            href="#projects"
-
-            class="btn"
-
-        >
-
-            Explore My Projects
-
-        </a>
-
-
-    </div>
-
-
-</header>
-
-
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-
-<section
-
-    class="about"
-
-    id="about"
-
->
-
-
-    <h2 class="section-title">
-
-        About Me
-
-    </h2>
-
-
-    <p class="section-description">
-
-        I am a Supply Chain and Logistics professional with a strong
-
-        interest in Data Analytics and Business Intelligence.
-
-        My projects focus on transforming business and operational data
-
-        into meaningful insights that support better decision-making.
-
-        I work on Sales Analytics, Inventory Management, Procurement,
-
-        Import Operations, and Supply Chain Performance.
-
-    </p>
-
-
-</section>
-
-
-
-<!-- =========================
-     FEATURED PROJECT
-========================= -->
-
-
-<section
-
-    class="project"
-
-    id="projects"
-
->
-
-
-    <div class="project-header">
-
-
-        <h2 class="section-title">
-
-            Featured Project
-
         </h2>
 
-
-        <h3>
-
-            AgriLink Animal Nutrition
-
-            <br>
-
-            Sales, Inventory & Supply Chain Analytics
-
-        </h3>
-
-
         <p>
 
-            An integrated Power BI solution designed to provide
+            Supply Chain professional with hands-on experience in
+            Logistics, Procurement, Inventory Management, and Business Intelligence.
 
-            end-to-end visibility across Sales Performance,
-
-            Inventory Control, Import Operations, Procurement,
-
-            Supplier Performance, Shipments, and Financial Obligations.
+            Passionate about transforming complex operational data
+            into clear dashboards that support strategic decision-making
+            and improve business performance.
 
         </p>
 
+        <div class="hero-buttons">
 
-    </div>
+            <a
+                href="#projects"
+                class="btn btn-primary"
+            >
+                View Projects
+            </a>
 
-
-
-    <!-- =========================
-         PROJECT SCOPE
-    ========================= -->
-
-
-    <div class="project-scope">
-
-
-        <h4>
-
-            Project Scope
-
-        </h4>
-
-
-        <p>
-
-            An integrated Power BI solution developed to provide
-
-            end-to-end visibility across sales performance,
-
-            inventory management, procurement, import operations,
-
-            shipments, and supplier activities.
-
-        </p>
-
-
-    </div>
-
-
-
-    <!-- =========================
-         DASHBOARD 1
-    ========================= -->
-
-
-    <div class="dashboard">
-
-
-        <img
-
-            src="sales-performance.png.png"
-
-            alt="Sales Performance Dashboard"
-
-        >
-
-
-        <div class="dashboard-info">
-
-
-            <h4>
-
-                01 — Sales Performance Dashboard
-
-            </h4>
-
-
-            <p>
-
-                This dashboard provides a comprehensive overview
-
-                of the company's sales performance during 2026.
-
-                It tracks key performance indicators such as
-
-                total sales value, quantity sold in tons,
-
-                gross profit, customer performance,
-
-                regional performance, and product performance.
-
-                The interactive product images on the left side
-
-                also work as slicers, allowing users to select
-
-                a specific product and dynamically filter the
-
-                entire dashboard.
-
-                The dashboard helps management identify
-
-                top-performing customers, analyze product demand,
-
-                monitor sales trends, and understand the main
-
-                drivers of revenue.
-
-            </p>
-
+            <a
+                href="https://www.linkedin.com/in/mostafa-ahmed-37a47924a/"
+                target="_blank"
+                class="btn btn-outline"
+            >
+                LinkedIn
+            </a>
 
         </div>
 
-
     </div>
 
+</section>
 
 
-    <!-- =========================
-         DASHBOARD 2
-    ========================= -->
+<!-- ==========================================
+     ABOUT
+========================================== -->
 
+<section
+    class="about"
+    id="about"
+>
 
-    <div class="dashboard">
+<div class="container">
 
+<h2 class="section-title">
 
-        <img
+About Me
 
-            src="inventory-control.png.png"
+</h2>
 
-            alt="Inventory Control Dashboard"
+<p class="section-description">
 
-        >
+I specialize in combining Supply Chain expertise with Data Analytics
+to help organizations improve operational efficiency,
+inventory performance,
+sales visibility,
+and purchasing decisions.
 
+</p>
 
-        <div class="dashboard-info">
 
+<div class="about-grid">
 
-            <h4>
+<div class="about-card">
 
-                02 — Inventory Control Dashboard
+<h3>
 
-            </h4>
+Supply Chain
 
+</h3>
 
-            <p>
+<p>
 
-                This dashboard focuses on inventory visibility
+Experienced in Procurement,
+Import Operations,
+Inventory Planning,
+Logistics,
+Supplier Management,
+and Demand Planning.
 
-                and stock management.
+</p>
 
-                It monitors current stock levels, inventory value,
+</div>
 
-                stock movement, days in stock, and inventory turnover.
 
-                A Reorder Point mechanism is also included to
+<div class="about-card">
 
-                identify products that are approaching critical
+<h3>
 
-                stock levels.
+Business Intelligence
 
-                The dashboard also analyzes supplier lead times
+</h3>
 
-                and product consumption rates to support proactive
+<p>
 
-                replenishment planning.
+Designing interactive dashboards that transform business data
+into strategic insights.
 
-                By comparing how quickly each product is consumed
+</p>
 
-                with the expected supplier lead time, the system
+</div>
 
-                helps estimate when a replenishment order should
 
-                be placed before inventory reaches a critical level.
+<div class="about-card">
 
-                This allows the business to anticipate future stock
+<h3>
 
-                requirements, reduce stockout risks, and ensure that
+Power BI
 
-                purchase orders are initiated early enough to cover
+</h3>
 
-                the supplier's lead time.
+<p>
 
-                The dashboard also analyzes how long each product
+Building professional dashboards using
+Power BI,
+Power Query,
+Data Modeling,
+and DAX.
 
-                remains in inventory, supporting better inventory
+</p>
 
-                turnover and working capital management.
+</div>
 
-            </p>
 
+<div class="about-card">
 
-        </div>
+<h3>
 
+Data Analytics
 
-    </div>
+</h3>
 
+<p>
 
+Analyzing operational,
+financial,
+sales,
+and inventory data
+to support business decisions.
 
-    <!-- =========================
-         DASHBOARD 3
-    ========================= -->
+</p>
 
+</div>
 
-    <div class="dashboard">
+</div>
 
-
-        <img
-
-            src="suppliers-procurement.png.png"
-
-            alt="Suppliers and Procurement Dashboard"
-
-        >
-
-
-        <div class="dashboard-info">
-
-
-            <h4>
-
-                03 — Import, Suppliers & Procurement Dashboard
-
-            </h4>
-
-
-            <p>
-
-                This dashboard provides visibility into the company's
-
-                international procurement and import operations.
-
-                It tracks incoming shipments, imported quantities,
-
-                supplier lead times, product targets, target achievement,
-
-                pending shipments, and supplier performance.
-
-                The dashboard also monitors supplier invoices,
-
-                payment status, payment due dates, and financial
-
-                obligations.
-
-                By connecting procurement data with shipment information,
-
-                the dashboard helps management understand what has
-
-                already arrived, what is currently in transit,
-
-                which products are behind target, and which financial
-
-                payments require attention.
-
-            </p>
-
-
-        </div>
-
-
-    </div>
-
-
-
-    <!-- =========================
-         PROJECT TOOLS
-    ========================= -->
-
-
-    <div class="project-tools">
-
-
-        <h3>
-
-            Tools & Technologies
-
-        </h3>
-
-
-        <div class="tool-list">
-
-
-            <span>
-
-                Power BI
-
-            </span>
-
-
-            <span>
-
-                Microsoft Excel
-
-            </span>
-
-
-            <span>
-
-                DAX
-
-            </span>
-
-
-            <span>
-
-                Data Modeling
-
-            </span>
-
-
-            <span>
-
-                Data Analytics
-
-            </span>
-
-
-            <span>
-
-                Supply Chain Analytics
-
-            </span>
-
-
-        </div>
-
-
-    </div>
-
+</div>
 
 </section>
 
 
 
-<!-- =========================
-     GENERAL SKILLS
-========================= -->
+<!-- ==========================================
+     STATISTICS
+========================================== -->
+
+<section class="stats">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Portfolio Highlights
+
+</h2>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<h2>
+
+2+
+
+</h2>
+
+<p>
+
+Power BI Projects
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>
+
+5
+
+</h2>
+
+<p>
+
+Interactive Dashboards
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>
+
+3
+
+</h2>
+
+<p>
+
+Years Supply Chain Experience
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>
+
+50+
+
+</h2>
+
+<p>
+
+KPIs Developed
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================================
+     PROJECT 01
+========================================== -->
+
+<section class="project" id="projects">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Featured Project
+
+</h2>
+
+<div class="project-card">
+
+<div class="project-info">
+
+<h2>
+
+AgriLink Animal Nutrition
+
+</h2>
+
+<p>
+
+An end-to-end Business Intelligence solution developed using
+Power BI to monitor Sales, Inventory, Procurement,
+Import Operations and Supplier Performance.
+
+The project enables management to make faster,
+data-driven decisions while reducing stock shortages,
+improving purchasing efficiency,
+and increasing operational visibility across the supply chain.
+
+</p>
+
+</div>
+
+</div>
 
 
-<section
-<!-- =========================
-     PROJECT 2
-========================= -->
+<!-- ===============================
+Business Challenge
+================================ -->
+
+<div class="about-grid">
+
+<div class="about-card">
+
+<h3>
+
+Business Challenge
+
+</h3>
+
+<p>
+
+Business information was distributed across multiple Excel files,
+making it difficult to monitor inventory,
+supplier performance,
+shipments,
+and sales from one centralized location.
+
+</p>
+
+</div>
+
+
+<div class="about-card">
+
+<h3>
+
+Solution
+
+</h3>
+
+<p>
+
+Designed a fully interactive Power BI reporting system
+that integrates sales,
+inventory,
+procurement,
+supplier,
+and shipment data into one dashboard.
+
+</p>
+
+</div>
+
+
+<div class="about-card">
+
+<h3>
+
+Business Value
+
+</h3>
+
+<p>
+
+Reduced manual reporting,
+improved visibility,
+supported purchasing decisions,
+and enabled proactive inventory management.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ===================================
+Dashboard 1
+=================================== -->
+
+<div class="dashboard">
+
+<img
+
+src="sales-performance.png.png"
+
+alt="Sales Dashboard"
+
+>
+
+<div class="dashboard-info">
+
+<h3>
+
+Sales Performance Dashboard
+
+</h3>
+
+<p>
+
+Provides a comprehensive overview of annual sales performance.
+
+Tracks Total Sales,
+Gross Profit,
+Quantity Sold,
+Customer Performance,
+Regional Performance,
+and Product Performance.
+
+Interactive product images work as slicers,
+allowing management to instantly analyze sales by product.
+
+The dashboard helps identify revenue drivers,
+best-selling products,
+top customers,
+and seasonal demand trends.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- ===================================
+Dashboard 2
+=================================== -->
+
+<div class="dashboard">
+
+<img
+
+src="inventory-control.png.png"
+
+alt="Inventory Dashboard"
+
+>
+
+<div class="dashboard-info">
+
+<h3>
+
+Inventory Control Dashboard
+
+</h3>
+
+<p>
+
+Provides full visibility of inventory health.
+
+Monitors Current Stock,
+Inventory Value,
+Inventory Turnover,
+Stock Aging,
+Days in Stock,
+Fast-moving Products,
+Slow-moving Products,
+and Reorder Point Status.
+
+The dashboard also predicts the optimal purchasing date by combining supplier Lead Time with product consumption rates.
+
+This allows procurement teams to place purchase orders before inventory reaches critical levels,
+reducing stockout risks while avoiding unnecessary overstock.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- ===================================
+Dashboard 3
+=================================== -->
+
+<div class="dashboard">
+
+<img
+
+src="suppliers-procurement.png.png"
+
+alt="Procurement Dashboard"
+
+>
+
+<div class="dashboard-info">
+
+<h3>
+
+Import, Procurement & Supplier Dashboard
+
+</h3>
+
+<p>
+
+Tracks international procurement activities,
+incoming shipments,
+supplier lead time,
+shipment status,
+target achievement,
+supplier invoices,
+payment due dates,
+and financial obligations.
+
+The dashboard gives management complete visibility over imported products,
+pending shipments,
+supplier performance,
+and procurement progress.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- ===================================
+Tools
+=================================== -->
+
+<div class="tools">
+
+<span>Power BI</span>
+
+<span>Power Query</span>
+
+<span>DAX</span>
+
+<span>Data Modeling</span>
+
+<span>Microsoft Excel</span>
+
+<span>Supply Chain Analytics</span>
+
+<span>Procurement Analytics</span>
+
+<span>Inventory Management</span>
+
+<span>Business Intelligence</span>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================================
+     PROJECT 02
+========================================== -->
 
 <section class="project">
 
-    <div class="project-header">
+<div class="container">
 
-        <h2 class="section-title">
-            Project 02
-        </h2>
+<h2 class="section-title">
 
-        <h3>
-            Sales & Inventory Analytics (2024–2026)
-        </h3>
+Project 02
 
-        <p>
-            A Power BI solution designed to analyze three years of sales
-            performance and inventory movement. The project enables
-            management to compare annual performance, monitor product demand,
-            identify top customers, evaluate inventory turnover,
-            detect slow-moving products, and optimize replenishment decisions.
-        </p>
+</h2>
 
-    </div>
+<div class="project-card">
 
-    <div class="project-scope">
+<div class="project-info">
 
-        <h4>
-            Business Objective
-        </h4>
+<h2>
 
-        <p>
-            Build an interactive reporting system that allows decision makers
-            to monitor sales growth across three years while maintaining
-            healthy inventory levels and reducing stock shortages.
-        </p>
+Sales & Inventory Analytics (2024–2026)
 
-    </div>
+</h2>
 
-    <!-- Dashboard 1 -->
+<p>
 
-    <div class="dashboard">
+A Business Intelligence solution developed to analyze
+three years of sales and inventory data.
+The project enables management to evaluate long-term business performance,
+identify customer and product trends,
+monitor inventory movement,
+and improve purchasing decisions using interactive Power BI dashboards.
 
-        <img
-            src="sales-analysis-3-years.png"
-            alt="Sales Analysis Dashboard"
-        >
+</p>
 
-        <div class="dashboard-info">
+</div>
 
-            <h4>
-                01 — Sales Analysis Dashboard
-            </h4>
-
-            <p>
-
-                This dashboard compares sales performance across 2024,
-                2025, and 2026.
-
-                Users can analyze monthly sales trends,
-                compare yearly growth,
-                identify top-selling products,
-                discover the highest-value customers,
-                evaluate regional performance,
-                and determine which products perform best during each month.
-
-                Interactive filters allow users to switch between years,
-                regions, and products instantly, providing a complete
-                understanding of business performance.
-
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 
-    <!-- Dashboard 2 -->
+<!-- ===============================
+Business Challenge
+================================ -->
 
-    <div class="dashboard">
+<div class="about-grid">
 
-        <img
-            src="inventory-analysis-3-years.png"
-            alt="Inventory Analysis Dashboard"
-        >
+<div class="about-card">
 
-        <div class="dashboard-info">
+<h3>
 
-            <h4>
-                02 — Inventory Analysis Dashboard
-            </h4>
+Business Challenge
 
-            <p>
+</h3>
 
-                This dashboard focuses on inventory performance over
-                a three-year period.
+<p>
 
-                It monitors inventory levels,
-                inventory turnover,
-                stock aging,
-                slow-moving products,
-                fast-moving products,
-                inventory availability,
-                and reorder point status.
+The company needed a clear view of sales trends and inventory behavior
+across multiple years to support forecasting,
+inventory optimization,
+and strategic business planning.
 
-                These insights help management optimize inventory,
-                reduce excess stock,
-                prevent stock shortages,
-                and improve purchasing decisions based on product demand.
+</p>
 
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 
-    <div class="project-tools">
+<div class="about-card">
 
-        <h3>
-            Tools & Technologies
-        </h3>
+<h3>
 
-        <div class="tool-list">
+Solution
 
-            <span>Power BI</span>
+</h3>
 
-            <span>DAX</span>
+<p>
 
-            <span>Power Query</span>
+Developed an interactive Power BI solution that compares sales,
+customers,
+products,
+and inventory performance across
+2024,
+2025,
+and 2026.
 
-            <span>Microsoft Excel</span>
+</p>
 
-            <span>Data Modeling</span>
+</div>
 
-            <span>Inventory Analytics</span>
 
-            <span>Sales Analytics</span>
+<div class="about-card">
 
-            <span>Business Intelligence</span>
+<h3>
 
-        </div>
+Business Value
 
-    </div>
+</h3>
 
-</section>
-    class="skills"
+<p>
 
-    id="skills"
+Enabled management to detect growth opportunities,
+identify slow-moving inventory,
+optimize stock levels,
+and improve replenishment decisions using historical business data.
 
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ===================================
+Dashboard 1
+=================================== -->
+
+<div class="dashboard">
+
+<img
+src="sales-analysis-3-years.png"
+alt="Sales Analysis Dashboard"
 >
 
+<div class="dashboard-info">
 
-    <h2 class="section-title">
+<h3>
 
-        Skills & Tools
+Sales Analysis Dashboard
 
-    </h2>
+</h3>
 
+<p>
 
-    <div class="skill-list">
+This dashboard analyzes sales performance across
+2024,
+2025,
+and 2026.
 
+Key insights include:
 
-        <div class="skill">
+• Year-over-Year Sales Comparison
 
-            Power BI
+• Monthly Sales Trends
 
-        </div>
+• Top Selling Products
 
+• Top Customers
 
-        <div class="skill">
+• Product Performance
 
-            Data Analytics
+• Regional Performance
 
-        </div>
+• Seasonal Demand Analysis
 
+Interactive filters allow decision makers
+to compare performance across years,
+customers,
+regions,
+and products within seconds.
 
-        <div class="skill">
+</p>
 
-            Business Intelligence
+</div>
 
-        </div>
-
-
-        <div class="skill">
-
-            Supply Chain Analytics
-
-        </div>
-
-
-        <div class="skill">
-
-            Inventory Management
-
-        </div>
+</div>
 
 
-        <div class="skill">
 
-            Procurement Analytics
+<!-- ===================================
+Dashboard 2
+=================================== -->
 
-        </div>
+<div class="dashboard">
+
+<img
+src="inventory-analysis-3-years.png"
+alt="Inventory Analysis Dashboard"
+>
+
+<div class="dashboard-info">
+
+<h3>
+
+Inventory Analysis Dashboard
+
+</h3>
+
+<p>
+
+Provides complete visibility into inventory performance
+over a three-year period.
+
+The dashboard monitors:
+
+• Inventory Turnover
+
+• Inventory Value
+
+• Stock Aging
+
+• Fast-moving Products
+
+• Slow-moving Products
+
+• Product Availability
+
+• Reorder Point Status
+
+These insights support better purchasing decisions,
+reduce excess inventory,
+minimize stock shortages,
+and improve overall inventory efficiency.
+
+</p>
+
+</div>
+
+</div>
 
 
-        <div class="skill">
 
-            Logistics
+<!-- ===================================
+Tools
+=================================== -->
 
-        </div>
+<div class="tools">
 
+<span>Power BI</span>
 
-        <div class="skill">
+<span>DAX</span>
 
-            Microsoft Excel
+<span>Power Query</span>
 
-        </div>
+<span>Microsoft Excel</span>
 
+<span>Data Modeling</span>
 
-    </div>
+<span>Sales Analytics</span>
 
+<span>Inventory Analytics</span>
+
+<span>Business Intelligence</span>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================================
+     SKILLS
+========================================== -->
+
+<section class="skills" id="skills">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Skills & Technologies
+
+</h2>
+
+<p class="section-description">
+
+The main tools and technologies I use to build Business Intelligence,
+Data Analytics, and Supply Chain Analytics solutions.
+
+</p>
+
+<div class="tool-list">
+
+<span>Power BI</span>
+
+<span>Microsoft Excel</span>
+
+<span>Power Query</span>
+
+<span>DAX</span>
+
+<span>SQL</span>
+
+<span>Data Modeling</span>
+
+<span>Data Cleaning</span>
+
+<span>Dashboard Design</span>
+
+<span>Business Intelligence</span>
+
+<span>Data Analytics</span>
+
+<span>Supply Chain Analytics</span>
+
+<span>Inventory Management</span>
+
+<span>Procurement Analytics</span>
+
+<span>Sales Analytics</span>
+
+<span>Logistics</span>
+
+<span>KPI Reporting</span>
+
+<span>Forecasting</span>
+
+<span>Inventory Optimization</span>
+
+</div>
+
+</div>
 
 </section>
 
 
 
-<!-- =========================
+<!-- ==========================================
      CONTACT
-========================= -->
+========================================== -->
+
+<section id="contact" class="about">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Let's Connect
+
+</h2>
+
+<p class="section-description">
+
+I am currently open to opportunities in
+
+<strong>Data Analytics</strong>,
+<strong>Business Intelligence</strong>,
+<strong>Supply Chain Analytics</strong>,
+and
+<strong>Logistics Analytics</strong>.
+
+Feel free to contact me.
+
+</p>
+
+<br><br>
+
+<div class="tool-list">
+
+<span>
+
+📧
+
+<a href="mailto:ma2959774@gmail.com"
+style="color:white;text-decoration:none;">
+
+ma2959774@gmail.com
+
+</a>
+
+</span>
 
 
-<section
-<section
-    id="contact"
-    class="about"
->
+<span>
 
-    <h2 class="section-title">
+📱
 
-        Let's Connect
+<a href="tel:+201201988728"
+style="color:white;text-decoration:none;">
 
-    </h2>
++20 120 198 8728
 
-    <p class="section-description">
+</a>
 
-        I am open to opportunities related to
-        Data Analytics,
-        Business Intelligence,
-        Supply Chain Analytics,
-        and Logistics.
+</span>
 
-        <br><br>
 
-        📧 Email:
-        <a href="mailto:ma2959774@gmail.com" style="color:#d8a94b;">
-            ma2959774@gmail.com
-        </a>
+<span>
 
-        <br><br>
+💼
 
-        📱 Phone:
-        <a href="tel:+201201988728" style="color:#d8a94b;">
-            +20 120 198 8728
-        </a>
+<a
+href="https://www.linkedin.com/in/mostafa-ahmed-37a47924a/"
+target="_blank"
+style="color:white;text-decoration:none;">
 
-        <br><br>
+LinkedIn Profile
 
-        💼 LinkedIn:
-        <a href="https://www.linkedin.com/in/mostafa-ahmed-37a47924a/"
-           target="_blank"
-           style="color:#d8a94b;">
-            linkedin.com/in/mostafa-ahmed-37a47924a
-        </a>
+</a>
 
-    </p>
+</span>
+
+</div>
+
+</div>
 
 </section>
 
-    </p>
 
 
-</section>
-
-
-
-<!-- =========================
+<!-- ==========================================
      FOOTER
-========================= -->
-
+========================================== -->
 
 <footer>
 
+<p>
 
-    <p>
+© 2026 Mostafa Ahmed
 
-        © 2026 Mostafa Ahmed
+</p>
 
-        | Data Analytics Portfolio
+<p>
 
-    </p>
+Data Analyst • BI Analyst • Supply Chain Analyst
 
+</p>
 
 </footer>
 
-
-</body>
-
-</html>
+}
